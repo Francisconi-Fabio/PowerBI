@@ -17,8 +17,6 @@ Receita Total do Mês Anterior
 
 Esta medida calcula a receita total do mês anterior. Utiliza a função DATEADD para ajustar o contexto temporal para o mês anterior.
 
-dax
-Copiar código
 sales last month = 
 CALCULATE(
     [sales], 
@@ -30,8 +28,7 @@ CALCULATE(
 )
 
 Para uma análise mais detalhada, você pode adicionar uma medida para calcular a variação percentual:
-dax
-Copiar código
+
 Revenue Change (%) = 
 DIVIDE(
     [sales] - [sales last month],
