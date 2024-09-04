@@ -1,0 +1,40 @@
+Análise de Receita Mensal com Inteligência Temporal
+Criar um relatório que permita comparar a receita total de vendas do mês atual com a receita do mês anterior. Isso ajudará a identificar variações na receita e avaliar o desempenho financeiro mensal. Para isso, utilizaremos funções de inteligência temporal no Power BI, especificamente com DAX (Data Analysis Expressions).
+
+Objetivo
+Comparar a receita total de vendas do mês atual com a receita do mês anterior.
+Identificar tendências e variações no desempenho financeiro.
+Dados Necessários
+Tabela de Vendas (fat_sales): Contém a coluna revenue (para receita) e sale_date (para a data da venda).
+Tabela de Calendário (dim_calendario): Contém uma coluna de datas (data) que cobre todo o período de análise e está relacionada à coluna sale_date na tabela de vendas.
+Medidas de DAX
+Receita Total do Mês Atual
+
+Esta medida calcula a receita total gerada pelas vendas no mês atual.
+sales = SUM(fat_sales[revenue])
+
+Receita Total do Mês Anterior
+
+Esta medida calcula a receita total do mês anterior. Utiliza a função DATEADD para ajustar o contexto temporal para o mês anterior.
+
+dax
+Copiar código
+sales last month = 
+CALCULATE(
+    [sales], 
+    DATEADD(
+        dim_calendario[data], 
+        -1, 
+        MONTH
+    )
+)
+
+Para uma análise mais detalhada, você pode adicionar uma medida para calcular a variação percentual:
+dax
+Copiar código
+Revenue Change (%) = 
+DIVIDE(
+    [sales] - [sales last month],
+    [sales last month],
+    0
+) * 100
