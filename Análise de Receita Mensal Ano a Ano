@@ -19,8 +19,6 @@ sales = SUM(fat_sales[revenue])
 Receita do Mesmo Mês no Ano Anterior
 Esta medida calcula a receita total do mesmo mês no ano anterior, usando a função DATEADD para ajustar o contexto temporal.
 
-dax
-Copiar código
 sales month over month = 
 CALCULATE(
     [sales],
