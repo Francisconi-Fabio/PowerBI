@@ -1,0 +1,41 @@
+Análise de Receita Mensal Ano a Ano
+Criar um relatório no Power BI para comparar a receita total de vendas do mês atual com a receita do mesmo mês no ano anterior. Isso ajudará a identificar tendências anuais 
+e avaliar o desempenho financeiro em diferentes períodos.
+
+Objetivo
+Comparar a receita total do mês atual com a receita do mesmo mês no ano anterior.
+Identificar tendências e variações anuais para tomar decisões informadas sobre estratégias de negócios.
+
+Dados Necessários
+Tabela de Vendas (fat_sales): Contém a coluna revenue (para receita) e sale_date (para a data da venda).
+Tabela de Calendário (dim_calendario): Contém uma coluna de datas (date) que cobre todo o período de análise e está relacionada à coluna sale_date na tabela de vendas.
+Medidas de DAX
+Receita Total do Mês Atual
+
+Esta medida calcula a receita total gerada pelas vendas no mês atual.
+
+sales = SUM(fat_sales[revenue])
+
+Receita do Mesmo Mês no Ano Anterior
+Esta medida calcula a receita total do mesmo mês no ano anterior, usando a função DATEADD para ajustar o contexto temporal.
+
+dax
+Copiar código
+sales month over month = 
+CALCULATE(
+    [sales],
+    DATEADD(
+        dim_calendario[date],
+        -1,
+        YEAR
+    )
+)
+Cálculo da Variação Percentual Ano a Ano (Opcional):
+Para uma análise mais detalhada, adicione uma medida para calcular a variação percentual em relação ao ano anterior:
+
+Yearly Revenue Change (%) = 
+DIVIDE(
+    [sales] - [sales month over month],
+    [sales month over month],
+    0
+) * 100
