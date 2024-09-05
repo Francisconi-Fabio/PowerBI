@@ -1,0 +1,23 @@
+Análise de Variação de Receita Mensal
+
+Uma empresa de varejo que deseja monitorar e avaliar as variações na receita mensal para identificar tendências e padrões de desempenho. O objetivo é criar relatórios no Power BI que não apenas mostrem a receita total de cada mês, mas também analisem como essa receita muda de um mês para o outro. Para isso, você usará as medidas DAX para calcular a diferença absoluta e percentual entre a receita do mês atual e a do mês anterior.
+
+Objetivo
+O objetivo é comparar a receita total do mês atual com a do mês anterior para entender a variação absoluta e percentual. Isso ajudará a identificar se há crescimento ou declínio na receita e fornecerá insights sobre o desempenho financeiro ao longo do tempo.
+
+Delta da Receita do Mês Anterior
+
+Fórmula DAX:
+sales last month delta = [sales] - [sales last month]
+
+Descrição: A medida sales last month delta calcula a diferença absoluta entre a receita total do mês atual e a receita do mês anterior. Esta diferença é essencial para entender a variação em termos monetários.
+
+Percentual de Variação da Receita do Mês Anterior
+
+Fórmula DAX:
+sales last month delta % =
+DIVIDE(
+    [sales last month delta], 
+    [sales last month]
+)
+
