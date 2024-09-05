@@ -1,5 +1,6 @@
 Análise de Receita Mensal com Inteligência Temporal
-Criar um relatório que permita comparar a receita total de vendas do mês atual com a receita do mês anterior. Isso ajudará a identificar variações na receita e avaliar o desempenho financeiro mensal. Para isso, utilizaremos funções de inteligência temporal no Power BI, especificamente com DAX (Data Analysis Expressions).
+Criar um relatório que permita comparar a receita total de vendas do mês atual com a receita do mês anterior. Isso ajudará a identificar variações na receita e avaliar o 
+desempenho financeiro mensal. Para isso, utilizaremos funções de inteligência temporal no Power BI, especificamente com DAX (Data Analysis Expressions).
 
 Objetivo
 Comparar a receita total de vendas do mês atual com a receita do mês anterior.
