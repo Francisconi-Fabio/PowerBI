@@ -1,0 +1,14 @@
+Uma empresa de varejo deseja entender a variação absoluta nas vendas acumuladas ao longo do ano, comparando o desempenho atual com o desempenho
+do mesmo período do ano passado. Essa análise ajuda a quantificar o impacto das mudanças nas vendas e tomar decisões baseadas em dados para melhorar o desempenho.
+
+Objetivo: Calcular a diferença absoluta entre as vendas acumuladas até a data atual e as vendas acumuladas até o mesmo período do ano passado, para avaliar o impacto real
+no desempenho das vendas.
+
+Passos para Implementar:
+
+Definir a Medida de Variação Absoluta:
+
+Crie a medida sales year to date last year delta para calcular a diferença absoluta entre as vendas acumuladas do ano atual e as do ano passado.
+
+sales year to date last year delta = 
+[sales year to date] - [sales year to date last year]
