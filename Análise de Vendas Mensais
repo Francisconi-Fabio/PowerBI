@@ -1,0 +1,13 @@
+Uma empresa de varejo deseja analisar o desempenho das vendas mês a mês, buscando entender tanto o crescimento percentual quanto a variação absoluta das vendas
+em relação ao mesmo período do ano anterior.
+
+Objetivo: Calcular e analisar a variação absoluta nas vendas para identificar mudanças específicas no desempenho de vendas e ajustar estratégias de marketing e 
+operações conforme necessário.
+
+Passos para Implementar:
+
+Definir a Medida de Variação Absoluta:
+
+Primeiro, você cria a medida sales YoY delta para calcular a diferença absoluta entre as vendas atuais e as vendas do ano anterior.
+
+sales YoY delta = [sales] - [sales year of year]
