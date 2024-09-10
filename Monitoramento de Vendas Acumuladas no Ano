@@ -1,0 +1,16 @@
+Uma empresa de varejo precisa monitorar o desempenho das vendas ao longo do ano. A empresa quer saber quanto já foi vendido até o momento, 
+para avaliar o progresso em relação às metas anuais e tomar decisões estratégicas baseadas no desempenho acumulado.
+
+Objetivo: Calcular e analisar as vendas acumuladas até a data atual para fornecer insights sobre o progresso anual das vendas e ajustar estratégias conforme necessário.
+
+Passos para Implementar:
+
+Definir a Medida de Vendas Acumuladas no Ano:
+
+Crie a medida sales year to date para calcular o total de vendas acumuladas desde o início do ano até a data atual.
+
+sales year to date = 
+TOTALYTD(
+    [sales],
+    dim_calendario[date]
+)
