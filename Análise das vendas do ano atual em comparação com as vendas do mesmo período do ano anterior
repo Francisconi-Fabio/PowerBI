@@ -1,0 +1,26 @@
+Uma empresa de varejo precisa analisar o desempenho das vendas mês a mês em comparação com o mesmo período do ano anterior.
+
+Objetivo: Comparar as vendas do ano atual com as vendas do mesmo período do ano passado para identificar tendências e fazer previsões.
+
+Passos para Implementar:
+
+Criar a Medida de Vendas do Ano Anterior:
+
+Primeiro, você cria a medida sales year of year para calcular as vendas do ano passado para a mesma data.
+
+sales year of year = 
+CALCULATE(
+    [sales],
+    DATEADD(Dim_calendario[date], -1, YEAR)
+)
+Criar uma Medida de Variação Percentual:
+
+Em seguida, você pode criar uma medida para calcular a variação percentual das vendas em relação ao ano passado.
+
+Sales Growth % = 
+DIVIDE(
+    [sales] - [sales year of year],
+    [sales year of year],
+    0
+) * 100
+
